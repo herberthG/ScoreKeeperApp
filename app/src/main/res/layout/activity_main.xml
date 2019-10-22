@@ -131,7 +131,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/submiButton"
+        android:id="@+id/RestsButton"
         android:text="ResetScore"
         />
 

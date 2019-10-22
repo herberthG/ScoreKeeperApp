@@ -17,8 +17,9 @@ public class MainActivity extends AppCompatActivity {
     Button button1team2;
     Button button2team2;
     Button button3team2;
-    int ScoreTeam1tv;
-    int ScoreTeam2tv;
+    int ScoreTeam1;
+    int ScoreTeam2;
+    Button ResetsScore;
 
 
     @Override
@@ -34,14 +35,69 @@ public class MainActivity extends AppCompatActivity {
         button1team2 = (Button) findViewById(R.id.button1team2);
         button2team2 = (Button) findViewById(R.id.button2team2);
         button3team2 = (Button) findViewById(R.id.button3team2);
-        ScoreTeam1tv = 0;
-        ScoreTeam2tv = 0;
+        ScoreTeam1 = 0;
+        ScoreTeam2 = 0;
+        ResetsScore = (Button) findViewById(R.id.RestsButton);
+
+        ResetsScore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ScoreTeam1=0;
+                ScoreTeam1TV.setText(String.valueOf(ScoreTeam1));
+                ScoreTeam2=0;
+                ScoreTeam2TV.setText(String.valueOf(ScoreTeam2));
+            }
+        });
 
         button1team1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ScoreTeam1tv++;
-                ScoreTeam1TV.setText(String.valueOf(ScoreTeam1tv));
+                ScoreTeam1++;
+                ScoreTeam1TV.setText(String.valueOf(ScoreTeam1));
+            }
+        });
+
+        button2team1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ScoreTeam1+=2;
+                ScoreTeam1TV.setText(String.valueOf(ScoreTeam1));
+            }
+        });
+
+        button3team1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ScoreTeam1+=3;
+                ScoreTeam1TV.setText(String.valueOf(ScoreTeam1));
+            }
+        });
+
+
+        button1team2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ScoreTeam2++;
+                ScoreTeam2TV.setText(String.valueOf(ScoreTeam2));
+            }
+        });
+
+        button2team2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ScoreTeam2+=2;
+                ScoreTeam2TV.setText(String.valueOf(ScoreTeam2));
+
+            }
+        });
+
+
+        button3team2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ScoreTeam2+=3;
+                ScoreTeam2TV.setText(String.valueOf(ScoreTeam2));
+
             }
         });
     }
